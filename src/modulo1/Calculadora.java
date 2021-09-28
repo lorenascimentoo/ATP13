@@ -10,9 +10,10 @@ public class Calculadora {
         int resultado2 = lerSoma();
         int resultado3 = lerSoma();
         int resultado4 = lerSoma();
-        System.out.printf("%d %d %d %d\n", resultado1, resultado2, resultado3, resultado4);
         
         double media = media(resultado1, resultado2, resultado3, resultado4);
+
+        System.out.printf("O cálculo da média entre os valores %d, %d, %d e %d é: %.2f", resultado1, resultado2, resultado3, resultado4,media);
     }
     static void cabecalho(){
         System.out.println("========= CALCULO DE MEDIA =========");
