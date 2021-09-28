@@ -32,7 +32,7 @@ public class Calculadora {
     }
     // metodo que recebe quatro valores, calcula a media e retorna o resultado da media
     static double media(int n1, int n2, int n3, int n4){
-        double resultMedia = (n1+n2+n3+n4)/4;
+        double resultMedia = (n1+n2+n3+n4)/4.0;
         return resultMedia;
     }
     //metodo lerValor solicita ao usuario um valor atraves do terminal
