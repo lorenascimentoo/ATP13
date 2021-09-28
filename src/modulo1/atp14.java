@@ -24,6 +24,16 @@ public class atp14 {
         System.out.println("4 - Divisão");
     }
 
+    static double lerNumero(String mensagem){
+        Scanner scan = new Scanner(System.in);
+        double numero;
+        do{
+            System.out.print(mensagem);
+            numero = Double.parseDouble(scan.nextLine()); 
+        }while (numero < 0);
+        return numero;
+    }
+
     static int lerOpcao(String mensagem){
         Scanner scan = new Scanner(System.in);
         int numero;
@@ -33,6 +43,7 @@ public class atp14 {
         }while (!validarOpcao(numero));
         return numero;
     }
+
     static boolean validarOpcao(int numero){
         boolean validacao = true;
         if (numero <= 0 || numero > 4){
@@ -43,39 +54,45 @@ public class atp14 {
     }
 
     static void selecionarMenu(int op){
+        double n1 = lerNumero("Digite o primeiro número: ");
+        double n2 = lerNumero("Digite o segundo número: ");
         switch (op) {
             case 1:
                 System.out.println("==== SOMA ===");
-                somar();
+                somar(n1, n2);
                 break;
             case 2:
                 System.out.println("==== SUBTRAÇÃO ===");
-                subtrair();
+                subtrair(n1, n2);
                 break;
             case 3:
                 System.out.println("==== MULTIPLICAÇÃO ===");
-                multiplicar();
+                multiplicar(n1, n2);
                 break;
             case 4:
                 System.out.println("==== DIVISÃO ===");
-                dividir();
+                dividir(n1, n2);
                 break;
         }
     }
 
-    static void somar(){
-
+    static double somar(double n1, double n2){
+        double soma = n1 + n2;
+        return soma;
     }
 
-    static void subtrair(){
-        
+    static double subtrair(double n1, double n2){
+        double subtracao = n1 - n2;
+        return subtracao;
     }
 
-    static void multiplicar(){
-        
+    static double multiplicar(double n1, double n2){
+        double multiplicacao = n1 * n2;
+        return multiplicacao;  
     }
 
-    static void dividir(){
-        
+    static double dividir(double n1, double n2){
+        double divisao = n1 / n2;
+        return divisao;  
     }
 }
