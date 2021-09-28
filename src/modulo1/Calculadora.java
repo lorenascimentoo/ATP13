@@ -6,13 +6,13 @@ public class Calculadora {
     static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
         cabecalho();
-        soma(10, 20);
-        media(10,8, 7, 10);
         int resultado1 = lerSoma();
         int resultado2 = lerSoma();
         int resultado3 = lerSoma();
         int resultado4 = lerSoma();
-        System.out.printf("%d %d %d %d", resultado1, resultado2, resultado3, resultado4);
+        System.out.printf("%d %d %d %d\n", resultado1, resultado2, resultado3, resultado4);
+        
+        double media = media(resultado1, resultado2, resultado3, resultado4);
     }
     static void cabecalho(){
         System.out.println("========= CALCULO DE MEDIA =========");
