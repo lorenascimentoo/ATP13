@@ -3,6 +3,7 @@ package modulo1;
 import java.util.Scanner;
 
 public class atp14 {
+    static Scanner scan;
     public static void main(String[]args){
         cabecalho();
 
@@ -25,7 +26,7 @@ public class atp14 {
     }
 
     static double lerNumero(String mensagem){
-        Scanner scan = new Scanner(System.in);
+        scan = new Scanner(System.in);
         double numero;
         do{
             System.out.print(mensagem);
@@ -35,7 +36,7 @@ public class atp14 {
     }
 
     static int lerOpcao(String mensagem){
-        Scanner scan = new Scanner(System.in);
+        scan = new Scanner(System.in);
         int numero;
         do{
             System.out.print(mensagem);
@@ -54,26 +55,31 @@ public class atp14 {
     }
 
     static void selecionarMenu(int op){
+
         double n1 = lerNumero("Digite o primeiro número: ");
         double n2 = lerNumero("Digite o segundo número: ");
+
+        double resultado=0.0;
         switch (op) {
             case 1:
                 System.out.println("==== SOMA ===");
-                somar(n1, n2);
+                resultado = somar(n1, n2);
                 break;
             case 2:
                 System.out.println("==== SUBTRAÇÃO ===");
-                subtrair(n1, n2);
+                resultado = subtrair(n1, n2);
                 break;
             case 3:
                 System.out.println("==== MULTIPLICAÇÃO ===");
-                multiplicar(n1, n2);
+                resultado = multiplicar(n1, n2);
                 break;
             case 4:
                 System.out.println("==== DIVISÃO ===");
-                dividir(n1, n2);
+                resultado = dividir(n1, n2);
                 break;
         }
+
+        System.out.printf("O resultado do calculo é: %.2f", resultado);
     }
 
     static double somar(double n1, double n2){
